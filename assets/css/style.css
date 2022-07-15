@@ -1,0 +1,113 @@
+@font-face {
+  font-family: digitalClock;
+  src: url(/assets/fonts/DS-DIGIB.TTF);
+}
+:root {
+  --green: #66e2a3;
+  --lightGrey: #485054;
+  --darkGrey: #2e383e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #6ba9a8;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+p {
+  font: 8rem digitalClock;
+  color: var(--green);
+  margin: 0;
+}
+
+#clockContainer {
+  background-color: var(--darkGrey);
+  padding: 15px;
+  border: 20px solid var(--darkGrey);
+  border-radius: 40px;
+  min-width: 800px;
+}
+
+#time {
+  background: linear-gradient(
+    160deg,
+    #485054,
+    #485054 50%,
+    #2e383e 50%,
+    #2e383e
+  );
+  padding: 30px 20px;
+  border: 4px solid #000;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#tag,
+#period {
+  font-size: 3rem;
+  margin-left: 10px;
+}
+
+.clockButton {
+  border-top: 22px solid var(--darkGrey);
+  border-radius: 20%;
+}
+
+@media (max-width: 768px) {
+  #clockContainer {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  p {
+    font: 4rem digitalClock;
+  }
+
+  #clockContainer {
+    min-width: 200px;
+  }
+
+  .clockButton {
+    border-top: 0;
+  }
+
+  #tag,
+  #period {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #clockContainer {
+    background-color: none;
+    padding: 15px;
+    border: none;
+    border-radius: 40px;
+  }
+
+  #time {
+    background: none;
+    padding: 0;
+    border: none;
+    border-radius: none;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #tag,
+  #period {
+    font-size: 1rem;
+  }
+}
