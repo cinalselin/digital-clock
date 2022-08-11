@@ -31,7 +31,7 @@ p {
 #clockContainer {
   background-color: var(--darkGrey);
   padding: 15px;
-  border: 20px solid var(--darkGrey);
+  border: 21px solid var(--darkGrey);
   border-radius: 40px;
   min-width: 800px;
 }
@@ -59,7 +59,7 @@ p {
 }
 
 .clockButton {
-  border-top: 22px solid var(--darkGrey);
+  border-top: 23px solid var(--darkGrey);
   border-radius: 20%;
 }
 

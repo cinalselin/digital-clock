@@ -63,7 +63,7 @@ let displayUhr = () => {
     sekunde.innerText = seconds;
   }
 
-  setInterval(displayUhr, 10000);
+  setInterval(displayUhr, 1000);
 };
 
 displayUhr();
