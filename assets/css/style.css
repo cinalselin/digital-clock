@@ -2,6 +2,7 @@
   font-family: digitalClock;
   src: url("../font/DS-DIGIB.TTF");
 }
+
 :root {
   --green: #66e2a3;
   --lightGrey: #485054;
@@ -22,7 +23,7 @@ body {
 }
 
 p {
-  font: 8rem digitalClock;
+  font: 8rem digitalClock, Courier;
   color: var(--green);
   margin: 0;
 }

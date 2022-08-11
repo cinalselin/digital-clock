@@ -1,18 +1,23 @@
+// VARIABLES
 let period = document.getElementById("period");
 let tag = document.getElementById("tag");
 let stunde = document.getElementById("stunde");
 let minute = document.getElementById("minute");
 let sekunde = document.getElementById("sekunde");
 
+// FUNCTION CLOCK
 let displayUhr = () => {
   let today = new Date();
   let hours = today.getHours();
-  hours <= 12 ? (period.innerHTML = "PM") : (period.innerHTML = "AM");
 
   let minutes = today.getMinutes();
   let seconds = today.getSeconds();
   let day = today.getDay();
 
+  // SHOW IF ITS PM OR AM
+  hours <= 12 ? (period.innerHTML = "AM") : (period.innerHTML = "PM");
+
+  // SHOW WEEKDAYS
   switch (day) {
     case 0:
       tag.innerText = "Su";
@@ -36,9 +41,26 @@ let displayUhr = () => {
       tag.innerText = "Sa";
       break;
   }
-  stunde.innerText = hours;
-  minute.innerText = minutes;
-  sekunde.innerText = seconds;
+
+  // ALWAYS DISPLAY TWO DIGITS
+  if (today.getHours() < 10) {
+    stunde.innerText = `0${hours}`;
+  } else {
+    stunde.innerText = `${hours}`;
+  }
+
+  if (today.getMinutes() < 10) {
+    minute.innerText = `0${minutes}`;
+  } else {
+    minute.innerText = minutes;
+  }
+
+  if (today.getSeconds() < 10) {
+    sekunde.innerText = `0${seconds}`;
+  } else {
+    sekunde.innerText = seconds;
+  }
+
   setInterval(displayUhr, 1000);
 };
 
