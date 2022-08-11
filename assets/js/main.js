@@ -45,6 +45,8 @@ let displayUhr = () => {
   // ALWAYS DISPLAY TWO DIGITS
   if (today.getHours() < 10) {
     stunde.innerText = `0${hours}`;
+  } else if (today.getHours() == 0) {
+    stunde.innerText = `00`;
   } else {
     stunde.innerText = `${hours}`;
   }
@@ -61,7 +63,7 @@ let displayUhr = () => {
     sekunde.innerText = seconds;
   }
 
-  setInterval(displayUhr, 1000);
+  setInterval(displayUhr, 10000);
 };
 
 displayUhr();
